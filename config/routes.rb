@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   # end
 
   namespace :api do
-    get "/product_path" => "products#product_action"
+    get "/all_products_path" => "products#product_action"
+    get "/mop_product_path" => "products#product_1_action"
+    get "/orbiter_product_path" => "products#product_2_action"
+    get "/welder_product_path" => "products#product_3_action"
+
+  
   end
+
+
 end
