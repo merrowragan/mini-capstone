@@ -3,8 +3,18 @@
   id: product.id,
   name: product.name,
   price: product.price,
-  image_path: product.image_path,
   description: product.description,
+  quantity: product.quantity,
+  supplier_name: product.supplier.name,
+  image: image.url,
+  
+ supplier_info: {
+  supplier_id: product.supplier.id,
+  supplier_name: product.supplier.name,
+  supplier_email: product.supplier.email,
+  supplier_phone_number: product.supplier.phone_number,
+  },
+
   
   formatted: { 
     is_discounted: product.is_discounted?,
