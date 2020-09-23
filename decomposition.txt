@@ -1,0 +1,22 @@
+1. Create an Order model
+2. Edit associations 
+3. Test association method in console (product.orders)
+4. Create method to place order (place_order)
+5. Make a post request for the order, using the product id 
+6. 
+
+
+
+
+
+
+
+
+
+
+
+Order belongs_to :product
+Order belongs_to :user
+
+Product has_many :orders
+User has_many :orders

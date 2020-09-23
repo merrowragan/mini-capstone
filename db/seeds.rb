@@ -5,9 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Supplier.create(name: "Really Big Stuff", email: "big_stuff@gmail.com", phone_number: "234-5890")
+Supplier.create(name: "Novelties!", email: "whoo_hooo@gmail.com", phone_number: "333-8880")
+Supplier.create(name: "Who Would Want This?", email: "garbage@gmail.com", phone_number: "456-9245")
+ 
 
-Product.create(name: "Wringer Mop Bucket", price: 49.20 , image_path: "https://images-na.ssl-images-amazon.com/images/I/81sl4r4nLsL._SL1500_.jpg"  , description: "Mop bucket and wringer combo features a 35-quart capacity for a more efficient way to clean large areas. Higher back reduces strain to allow comfortable wringing. Lower front offers easier placement of mops to prevent back strain. Smooth surface lets you quickly wipe down the exterior to maintain sanitary use. Nonmarking casters roll smoothly across floors for effortless mobility. " )
+Product.create({supplier_id: 1, name: "Whirring Cool Machine", price: 49.20, description: "It's loud! It's cool! It whirrs!!", quantity: 34 } )
 
-Product.create(name: "Commercial Orbiter Floor Machine", price: 302.38, image_path: "https://images-na.ssl-images-amazon.com/images/I/71GzTbqnATL._AC_SL1500_.jpg" , description: "The Commercial Orbiter makes it simple to scrub and polish all floor surfaces as well as deep clean institutional grade carpets. Most conventional floor scrubbers can be difficult to use. That’s why the Orbiter has a brush head that rotates with no torque or gouging in a random orbit for easy-to-use fingertip control.")
+Product.create({supplier_id: 1, name: "Welder Machine", price: 302.38,  description: "Be careful, it's hot! Not for children under 5.", quantity: 2})
 
-Product.create(name: "Welder Machine with Electrode Holder" , price: 97.00, image_path: "https://images-na.ssl-images-amazon.com/images/I/41UyQIDNBAL._AC_.jpg" , description: "The machine is equipped with high-efficiency and low-cost cutting technology, can be widely used in automobile manufacturing, plumbing work, metal processing ,strict construction work, site work, high-quality welding and thin material precision welding.")
+Product.create({supplier_id: 2, name: "Big Lollipop" , price: 97.00, description: "Years and years of sugary goodness", quantity: 229})
+
+Product.create({supplier_id: 3, name: "Huge Legos", price: 100.00, description: "These Legos are comically large!", quantity: 5067})
+
+Image.create(product_id: 1, url: "https://mk0cnccookbookgxcner.kinstacdn.com/wp-content/uploads/2017/02/GiantLathe.jpg")
+Image.create(product_id: 2, url: "https://cdn.thefabricator.com/a/mig-welding-the-basics-and-then-some-man-welding-with-lincoln-power-source.jpg")
+Image.create(product_id: 3, url: "https://images-na.ssl-images-amazon.com/images/I/319BnBzSwaL.jpg")
+Image.create(product_id: 3, url: "https://images.vat19.com/covers/large/giant-lollipop.jpg")
+Image.create(product_id: 4, url: "https://i5.walmartimages.com/asr/dc8f5097-f842-4e71-81f8-d80862c0e0fa_1.dcecb016f2ec61e3b0ce842c01865397.jpeg")
