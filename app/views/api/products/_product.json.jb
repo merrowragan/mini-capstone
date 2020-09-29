@@ -6,6 +6,7 @@
   description: product.description,
   quantity: product.quantity,
   supplier_name: product.supplier.name,
+  categories: product.categories,
   images: product.images,
   
  supplier_info: {

@@ -1,0 +1,15 @@
+1. Create carted products model with columns id, product_id, user_id, quantity, order_id, and status
+2. Remove quantity and product_id from orders
+2. Check 
+3. Associate products and carted products (carted_products has many)
+4. Make data, test associations
+5. Associate orders and carted_products 
+6. Make data, test associations 
+7. 
+
+Filtered index 
+Test create and index actions 
+Change orders create 
+Test it 
+Carted products destroy (change status to remove)
+Test 

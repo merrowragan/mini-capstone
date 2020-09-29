@@ -5,23 +5,25 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :product_categories
   has_many :categories, through: :product_categories
+  has_many :carted_products
+  has_many :orders, through: :carted_products
 
   validates :name, uniqueness: true, presence: true
   validates :description, length: {in: 10..500}
   validates :price, numericality: {greater_than: 0} 
   validates :quantity, numericality: {greater_than: 0}
 
-  # scope :title_search, -> (search_term) { where("name iLIKE ?", "%#{params[:search_term]}%")
-  # scope :discounted, ->(check_discount) { where("price < ?", 10) if check_discount }
-  # scope :sorted, ->(sort, sort_order) {
-  #   if sort == "price" && sort_order == "asc"
-  #     order(price: :asc)
-  #   elsif sort == "price" && sort_order == "desc"
-  #     order(price: :desc)
-  #   else
-  #     order(id: :asc)
-  #   end
-  # }
+  scope :title_search, -> (search_term) { where("name iLIKE ?", "%#{search_term}%") }
+  scope :discounted, ->(check_discount) { where("price < ?", 10) if check_discount }
+  scope :sorted, ->(sort, sort_order) {
+    if sort == "price" && sort_order == "asc"
+      order(price: :asc)
+    elsif sort == "price" && sort_order == "desc"
+      order(price: :desc)
+    else
+      order(id: :asc)
+    end
+  }
    
 
 
