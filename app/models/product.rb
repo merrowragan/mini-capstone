@@ -11,7 +11,7 @@ class Product < ApplicationRecord
   validates :name, uniqueness: true, presence: true
   validates :description, length: {in: 10..500}
   validates :price, numericality: {greater_than: 0} 
-  validates :quantity, numericality: {greater_than: 0}
+  # validates :quantity, numericality: {greater_than: 0}
 
   scope :title_search, -> (search_term) { where("name iLIKE ?", "%#{search_term}%") }
   scope :discounted, ->(check_discount) { where("price < ?", 10) if check_discount }
